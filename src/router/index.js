@@ -10,7 +10,7 @@ router.get('/health', (req,res) => {
         enviroment: process.env.ENVIROMENT || 'Not found.'
     })
 })
-.use('/products', productRouter)
+.use('/products-test', productRouter)
 .use('/cart', cartRouter)
 
 
