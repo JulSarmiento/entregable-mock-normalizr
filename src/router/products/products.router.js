@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const isAdmin = require('../../middlewares/isAdmin.middleware');
-const productExist = require('../../middlewares/productExist.middleware')
 const Container = require('../../../classes/container.class');
 
 const products = new Container();
