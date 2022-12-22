@@ -10,12 +10,26 @@ class Container {
   }
 
   async saveProduct(element){
+
+    const {name, lastname, age, email, username, picture, message}  = element;
     const array = await this.getAll();
-    element.id = array.length > 0 ? array[array.length -1].id + 1 : 1;
-    element.timestamp = new Date().toLocaleString();
+    const timestamp = new Date().toLocaleString();
+    const id = email;
+    const messgeToPush = {
+      author: {
+        id,
+        name,
+        lastname,
+        age,
+        username,
+        picture
+      }, 
+      message,
+      timestamp
+    }
 
     try{
-      array.push(element);
+      array.push(messgeToPush);
       saveFiles(this.filename, array);
       return element;
     }

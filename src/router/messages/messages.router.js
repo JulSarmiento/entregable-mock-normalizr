@@ -8,10 +8,6 @@ const messages = new Container('messages');
 router.post('/', async (req, res, next) => {
   try{
     await messages.saveProduct(req.body);
-    // res.status(200).json({
-    //   success: true, 
-    //   data
-    // })
     res.redirect("/public");
   }
   catch (err) {
@@ -24,9 +20,9 @@ router.post('/', async (req, res, next) => {
 router.get('/',async (req, res, next) => {
   console.log('params in get products messages', req.params)
   try{
+    const data = await messages.getAll();
     res.status(200).json({
-      success: true,
-      data: await messages.getAll()
+      data
     });
   }
   catch (err) {
