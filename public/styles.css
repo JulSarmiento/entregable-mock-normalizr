@@ -9,11 +9,13 @@ body{
 
 table {
   width: 400px;
+  margin: auto auto;
 }
 
 .table-cell {
   border: 1px solid blue;
 }
+
 
 .form-styles {
   display: grid;
@@ -30,6 +32,34 @@ table {
   width: 380px;
 }
 
-.message-center {
-  margin-bottom: 20px;
+.message-center, form {
+  margin: auto auto;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  gap: 5px;
+}
+
+ul li img{
+  border-radius: 50%;
+}
+
+.message-email{
+  color: blue;
+}
+
+.message-time{
+  color: brown;
+}
+
+.message-message{
+  color: green;
 }

@@ -14,11 +14,12 @@ class Container {
     const {name, lastname, age, email, username, picture, message}  = element;
     const array = await this.getAll();
     const timestamp = new Date().toLocaleString();
-    const id = email;
+    const id = array.length + 1;
     const messgeToPush = {
+      id,
       author: {
-        id,
         name,
+        email,
         lastname,
         age,
         username,
